@@ -1,0 +1,296 @@
+\documentclass{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{mathabx}
+\usepackage{mathrsfs}
+\usepackage{hyperref}
+\usepackage{MnSymbol}
+\usepackage[dvipsnames]{xcolor}
+
+\DeclareMathOperator{\Wf}{Wf}
+\DeclareMathOperator{\We}{We}
+\DeclareMathOperator{\WfWe}{WfWe}
+\DeclareMathOperator{\Isom}{Isom}
+\DeclareMathOperator{\On}{On}
+\DeclareMathOperator{\Le}{Le}
+\DeclareMathOperator{\St}{St}
+\DeclareMathOperator{\Tr}{Tr}
+
+\newcommand{\RelationLessThan}[2]{(#1^{-1})\text{''}\{#2\}}
+\newcommand{\RLessThan}[1]{\RelationLessThan{R}{#1}}
+
+\newtheorem{theorem}{Theorem}
+
+\title{Notes from Introduction to Axiomatic Theory by Takeuti and Zaring}
+\author{gajukbhat}
+\date{October 2021}
+
+\begin{document}
+
+\maketitle
+
+\section{Chapter 4}
+\subsection{Proposition 4.12}
+Consider the possibilities for the term \(A\).
+\begin{description}
+  \item[Case 1] \(A\) is a class symbol.
+  \item[Case 2] \(A\) is a free variable.
+\end{description}
+
+\section{Chapter 5}
+\subsection{Exercises on Page 17}
+
+I should revisit what \(\mathscr{M}(a)\) represents.
+
+PS-That was easy enough.
+
+\section{Chapter 6}
+\subsection{Exercises on Page 25}
+
+\subsubsection{Exercise 16}
+
+I'm trying out some \LaTeX{} here. To solve the actual problem itself, I need to
+use the definition of equality of classes.
+
+\[
+  A = \{z \vert (\exists x) (\exists y) [z = \langle x, y \rangle]\}
+\]
+
+\subsubsection{Exercise 20}
+
+I'm experimenting even more with \LaTeX{}.
+\begin{align*}
+  A \restriction B \\
+  A\text{``}B
+\end{align*}
+
+\subsection{Exercises on Page 28}
+
+\subsubsection{Exercise 7}
+
+I don't need to think about the existence of \(A_2 \circ A_1\) as a function I
+suppose. There's a problem with the matching of domains and ranges of \(A_1\)
+and \(A_2\). The inverse of a relation formed from a composition is not the
+inverse of the composition. This is very helpful to keep in mind. The usage of
+types also makes this clear.
+
+\subsubsection{Exercise 11}
+Doesn't \(\mathscr{F}\mathit{n}_2(A) \rightarrow \mathscr{F}\mathit{n}(A)\)?
+Indeed, it does.
+
+\subsection{Proposition 6.26}
+I know that \(R \WfWe B\). Therefore the following holds.
+\[
+  (\forall x \in B) \mathscr{M}(B \cap \RLessThan{x}))
+\]
+
+\subsection{Proposition 6.31}
+I tried to use the definition of \(H \Isom_{R_1, R_2}(A_1, A_2)\).
+
+\subsection{Exercise on Page 34}
+We know that \(R_1 \We A_1 \leftrightarrow R_2 \We A_2\). Is it safe to claim
+that \((R_2^{-1})\text{''}\{H\text{'}(x)\} =
+  H\text{''}(R_1^{-1})\text{''}\{x\}\)?
+
+\begin{align*}
+  (R_2^{-1})\text{''}\{H\text{'}(x)\} &= \{y \vert y R_2 H\text{'}x\} \\
+  &= \{y \vert \exists! w (y = H\text{'}w \wedge
+      H\text{'}w R_2 H\text{'}x) \} \\
+  &= \{y \vert \exists! w (y = H\text{'}w \wedge
+      w R_1 x) \} \\
+  &= \{y \vert \exists! w (y = H\text{'}w \wedge
+      w \in R_1^{-1}\text{''}\{x\}) \} \\
+  &= H\text{''}(R_1^{-1})\text{''}\{x\}
+\end{align*}
+
+Indeed! The problem is a bit unusual in that it doesn't propose this result
+directly.
+
+\subsection{Exercises on Page 42}
+\subsubsection{Exercise 1}
+The following result is useful.
+\[
+  \alpha = \cup (\alpha) \vee \alpha = \cup (\alpha) + 1
+\]
+
+\section{Chapter 7}
+
+\subsection{Proposition 7.33}
+If \(\omega \in K_1\), then \(\omega \in \omega\).
+
+\subsection{Exercises on Page 45}
+\subsubsection{Exercise 5}
+\(A - \alpha \neq 0\) implies \(\alpha \in A\) and for all \(\beta \in (A -
+\alpha)\), \(\alpha \subseteq \beta\).
+
+\subsection{Exercises on Page 50}
+\subsubsection{Exercise 4}
+\begin{theorem}
+Assume \(R \We A\).
+\[
+  K = \{f \vert (\exists a \in A) (f \mathscr{F} a \wedge
+    (\forall x \in \RLessThan{a}))(f\text{'}x = G\text{'}(f \restriction
+        \RLessThan{x})))) \}
+\]
+
+  Let \(F = \bigcup (K)\). Then
+  \begin{itemize}
+    \item \(F \mathscr{F} A\)
+    \item \((\forall a \in A) (F \text{'}a =
+      G\text{'}(F\text{''}(\RLessThan{a}))))\)
+    \item \((F_1 \mathscr{F} A) \wedge
+     ((\forall a \in A) (F_1 \text{'}a =
+      G\text{'}(F_1 \text{''}(\RLessThan{a})))))
+      \rightarrow F_1 = F\)
+  \end{itemize}
+\end{theorem}
+
+\subsection{Proposition 7.47}
+Choose \(x \in (A - B)\) such that \((A - B) \cap \RLessThan{x}) = 0\). In other
+words, \(x\) is the \(R\)-minimal element in \((A - B)\).
+
+\subsection{Proposition 7.51}
+If I show that \(\mathscr{W}(F)\) is R-transitive, then I can prove that it is a
+bijection from \(\On\) to \(A\).
+
+That follows from the definition of \(G\).
+
+Can I show that \(F\text{''}(\alpha) = \RLessThan{F\text{'}(\alpha)} \cap A\)? I
+already have \(\RLessThan{F\text{'}(\alpha)} \cap A \subseteq
+F\text{''}(\alpha)\). Indeed, what Takeuti and Zaring show in
+their proof amounts to proving that \(F\text{''}(\alpha) \subseteq
+\RLessThan{F\text{'}(\alpha)} \cap A\).
+
+\subsection{Proposition 7.56}
+\begin{itemize}
+  \item The well-ordering is easy to prove once I get the foundedness.
+    \[
+      (\forall x) ((x \neq 0 \wedge x \subseteq \On^2) \rightarrow
+          (\exists y)(x \cap \RelationLessThan{\Le}{y} = 0))
+    \]
+
+  And I got the foundedness.
+\end{itemize}
+
+\subsection{Exercises on Page 62}
+The definition of \(\minusdot\) was interesting. I made a note on the book.
+
+\subsubsection{Exercise 4}
+I tried to do this by induction on \(n\). That leads me to want the proof of
+this statement.
+
+\[
+  (m + 1) = (1 + m)
+\]
+
+Is there a simple way to get to this? I have to use induction again. It's true
+for \(m = 0\) by definition. Assume it's true for \(m \le n\). Then,
+\begin{align*}
+  ((n + 1) + 1) &= ((1 + n) + 1) \\
+                &= (1 + (n + 1) &\text{by associativity.}
+\end{align*}
+Now the rest of the proof is straightforward.
+
+\subsubsection{Exercise 10}
+The base case and non-limit case are straightforward. Assume \(\beta \in
+K_{II}\) and for all \(\alpha \le \zeta < \beta\), there exists \(\delta\) such
+that \(\alpha + \delta = \zeta\).
+
+\[
+  \delta_E = \bigcup \{\delta \vert \exists \zeta ((\alpha \le \zeta < \beta)
+      \wedge (\alpha + \delta = \zeta))\}
+\]
+
+The claim is that \(\alpha + \delta_E = \beta\). Clearly for all \(\gamma \in
+\delta_E\), there exists \(\delta\) such that \(\gamma \subseteq \delta\).
+Therefore, \(\alpha + \delta_E \subseteq \beta\).
+
+If I just prove that \(\delta_E \in K_{II}\), I think I'll be done. That's
+probably easy. Consult the right steps though.
+
+PS-From the definition, we have the following.
+\[
+  \forall \zeta ((\alpha \le \zeta < \beta) \rightarrow \\
+      (\alpha + \zeta) \subseteq (\alpha + \delta_E))
+\]
+
+The result is immediate.
+
+\subsection{Exercises on Page 66}
+\subsubsection{Exercise 3}
+
+Start with the proof of \(mn = nm\). The result is clear for \(n=0,1\).
+
+Assume it's true for \(n\). Then the following holds.
+\begin{align*}
+  m(n + 1) &= mn + m \\
+    &= nm + m
+\end{align*}
+
+I suppose I can prove my induction again that \((n+1)m = nm + m\). It's clear for
+\(m = 0\). Assuming it's true for \(m\), the following holds.
+\begin{align*}
+  (n + 1)(m + 1) &= (n + 1)m + (n + 1) \\
+    &= nm + m + n + 1 \\
+    &= (nm + n) + (m + 1) \\
+    &= n(m + 1) + (m + 1)
+\end{align*}
+
+The result is immediate.
+
+Now consider the right distributive law. Again, we use induction on \(k\). For
+\(k = 0\), the result is clear. Assuming the result holds up to \(k\), the
+following is true.
+\begin{align*}
+  (m + n)(k + 1) &= (m + n)k + (m + n) \\
+    &=(mk + nk) + (m + n) \\
+    &=m(k + 1) + n(k + 1)
+\end{align*}
+
+\subsubsection{Exercise 4}
+The counterexample would be \(\alpha = \omega\) and \(\gamma = \omega 2\).
+\(\alpha\gamma = \omega\omega 2 \neq \omega 2\).
+
+\subsection{Proposition 8.44}
+Suppose there are two different expansions.
+\begin{align*}
+  \beta &= \alpha^{\beta_{n_1}} \gamma_{n_1} + \cdots
+      \alpha^{\beta_{0}} \gamma_{0} \\
+        &= \alpha^{\delta_{n_2}} \eta_{n_2} + \cdots
+      \alpha^{\delta_{0}} \eta_{0}
+\end{align*}
+
+If you assume \(\beta_{n_1} > \delta_{n_2}\), we end up with a contradiction
+using Proposition 8.43. Therefore \(\beta_{n_1} = \delta_{n_2}\). Using the same
+proposition, I can prove that \(\eta_{n_2} = \gamma_{n_1}\). How do I deal with
+the difference between \(n_1\) and \(n_2\)?
+
+PS-It's safe to use induction.
+
+\section{Chapter 9}
+\subsection{Proposition 9.10}
+(a) Let me prove the inductive step for non-limit ordinals. Clearly, it's not true
+that \(R_1 \alpha \nsubseteq R_1 (\alpha + 1)\).
+
+Suppose that \(R_\alpha\) satisfies the conditions \(\Tr(R_\alpha)\) and
+\(\St(R_\alpha)\). What can we say about \(R_{\alpha + 1}\)?
+
+If \(y \in R_{\alpha + 1}\), then \(y \subseteq R_\alpha\). Can we claim that
+\(y \subset R_{\alpha + 1}\) and \(\mathcal{P}(y) \subseteq R_{\alpha + 1}\) or
+equivalently \(w \subseteq y \rightarrow w \in R_{\alpha + 1}\)?
+This is true for \(\alpha = 0\).
+
+See if it's a good idea to look at the powerset relationship.
+
+Look at \(x \in y\). We have \(y \subseteq R_\alpha \rightarrow x \in
+R_\alpha\). Because of transitivity \(x \subseteq R_\alpha\) and therefore \(x
+\in R_{\alpha + 1}\), Thus \(y \in R_{\alpha + 1} \rightarrow x \in R_{\alpha +
+1}\).
+
+Likewise \(w \subseteq y\) implies \(w \subseteq R_\alpha\) and therefore
+\(w \in R_{\alpha + 1}\). I didn't need to use the second part of the
+super-transitivity of \(R_\alpha\) at all. Now that's curious.
+
+Take the limit ordinals now.
+\end{document}
