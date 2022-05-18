@@ -9,6 +9,7 @@
 \usepackage[dvipsnames]{xcolor}
 \usepackage{bussproofs}
 \newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
 
 \title{Notes from Proof Theory by Takeuti}
 \author{gajukbhat}
@@ -19,4 +20,19 @@
 \maketitle
 
 \section{Chapter 1}
+\subsection{Lemma 2.12}
+Make the proof regular to get \(P''(a)\). If the proof contains no eigenvariables that are \(a\) or contained in \(t\), then \(P'(a) = P''(a)\). 
+Let the induction hypothesis be that if the proof contains up to \(n\) eigenvariables that are \(a\) or contained in \(t\), then there's a \(P'(a)\) derived from \(P(a)\) that is a proof of \(\Gamma(a) \rightarrow \Delta(a)\). It's possible to show that the induction hypothesis implies that if the proof contains \(n + 1\) eigenvariables that are \(a\) or contained in \(t\), then there's a \(P'(a)\) derived from \(P(a)\) that is a proof of \(\Gamma(a) \rightarrow \Delta(a)\).
+From that the conclusion follows.
+
+\subsection{Definition 2.15}
+I want to prove that the definition defines an equivalence relation. Suppose for some \(u_1, \ldots, u_n\) and \(v_1, \ldots, v_n\)
+\[
+A\biggl(\frac{u_1, \ldots, u_n}{w_1, \ldots, w_n}\biggr)
+\]
+and
+\[
+B\biggl(\frac{v_1, \ldots, v_n}{w_1, \ldots, w_n}\biggr)
+\]
+are the same.
 \end{document}
