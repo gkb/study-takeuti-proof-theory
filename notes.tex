@@ -15,24 +15,55 @@
 \author{gajukbhat}
 \date{April 2022}
 
+\def\fCenter{\mbox{$\rightarrow$}}
+
 \begin{document}
 
 \maketitle
 
 \section{Chapter 1}
 \subsection{Lemma 2.12}
-Make the proof regular to get \(P''(a)\). If the proof contains no eigenvariables that are \(a\) or contained in \(t\), then \(P'(a) = P''(a)\). 
+Make the proof regular to get \(P''(a)\). If the proof contains no eigenvariables that are \(a\) or contained in \(t\), then \(P'(a) = P''(a)\).
 Let the induction hypothesis be that if the proof contains up to \(n\) eigenvariables that are \(a\) or contained in \(t\), then there's a \(P'(a)\) derived from \(P(a)\) that is a proof of \(\Gamma(a) \rightarrow \Delta(a)\). It's possible to show that the induction hypothesis implies that if the proof contains \(n + 1\) eigenvariables that are \(a\) or contained in \(t\), then there's a \(P'(a)\) derived from \(P(a)\) that is a proof of \(\Gamma(a) \rightarrow \Delta(a)\).
 From that the conclusion follows.
 
 \subsection{Definition 2.15}
 I want to prove that the definition defines an equivalence relation. Suppose for some \(u_1, \ldots, u_n\) and \(v_1, \ldots, v_n\)
+% TODO: Create a macro to make typing this easier.
 \[
-A\biggl(\frac{u_1, \ldots, u_n}{w_1, \ldots, w_n}\biggr)
+A\biggl(\frac{u_1, \ldots, u_m}{w_1, \ldots, w_m}\biggr)
 \]
 and
 \[
-B\biggl(\frac{v_1, \ldots, v_n}{w_1, \ldots, w_n}\biggr)
+B\biggl(\frac{v_1, \ldots, v_m}{w_1, \ldots, w_m}\biggr)
 \]
-are the same.
+are the same. And suppose for some \(x_1, \ldots, x_n\) and \(y_1, \ldots, y_n\)
+\[
+B\biggl(\frac{x_1, \ldots, x_n}{z_1, \ldots, z_n}\biggr)
+\]
+and
+\[
+C\biggl(\frac{y_1, \ldots, y_n}{z_1, \ldots, z_n}\biggr)
+\]
+are identical.
+
+Later, there's a claim that we can prove by induction on the number of logical symbols in \(A\) that if \(A \sim B\), then \(A \equiv B\) is provable without cut.
+I could get it if I took \(A \equiv B\) to mean \(A \rightarrow B\) and \(B \rightarrow A\).
+Once I apply any one of the rules of sequent calculus, there's no going back. The formulae only get more complex.
+Wait until I learn more about cut elimination and keep going with what I have.
+
+\subsection{Exercise 3.11}
+    \begin{description}
+        % TODO: See if I really need to add a colon after the item description argument.
+        \item[Outermost symbol is \(\supset\):]
+        Assume there are \textbf{LJ}-proofs of the sequents \(\neg\neg A \rightarrow A\)
+        and \(\neg \neg B \rightarrow B\).
+        Let me prove the sequent \(\neg \neg (A \supset B) \rightarrow (A \supset B)\).
+        PS-This one's actually easy when I use the result of (1) from Exercise 3.10 and the cut formula.
+        I got the rest as well.
+%            \begin{prooftree}
+%                \Axiom$A, \fCenter\ B$
+%                \UnaryInf$A, B \fCenter\ C$
+%            \end{prooftree}
+    \end{description}
 \end{document}
