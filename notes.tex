@@ -11,6 +11,8 @@
 \newtheorem{theorem}{Theorem}
 \newtheorem{lemma}{Lemma}
 
+\DeclareMathOperator{\LK}{\textbf{LK}}
+
 \title{Notes from Proof Theory by Takeuti}
 \author{gajukbhat}
 \date{April 2022}
@@ -31,19 +33,19 @@ From that the conclusion follows.
 I want to prove that the definition defines an equivalence relation. Suppose for some \(u_1, \ldots, u_n\) and \(v_1, \ldots, v_n\)
 % TODO: Create a macro to make typing this easier.
 \[
-A\biggl(\frac{u_1, \ldots, u_m}{w_1, \ldots, w_m}\biggr)
+    A\biggl(\frac{u_1, \ldots, u_m}{w_1, \ldots, w_m}\biggr)
 \]
 and
 \[
-B\biggl(\frac{v_1, \ldots, v_m}{w_1, \ldots, w_m}\biggr)
+    B\biggl(\frac{v_1, \ldots, v_m}{w_1, \ldots, w_m}\biggr)
 \]
 are the same. And suppose for some \(x_1, \ldots, x_n\) and \(y_1, \ldots, y_n\)
 \[
-B\biggl(\frac{x_1, \ldots, x_n}{z_1, \ldots, z_n}\biggr)
+    B\biggl(\frac{x_1, \ldots, x_n}{z_1, \ldots, z_n}\biggr)
 \]
 and
 \[
-C\biggl(\frac{y_1, \ldots, y_n}{z_1, \ldots, z_n}\biggr)
+    C\biggl(\frac{y_1, \ldots, y_n}{z_1, \ldots, z_n}\biggr)
 \]
 are identical.
 
@@ -66,4 +68,12 @@ Wait until I learn more about cut elimination and keep going with what I have.
 %                \UnaryInf$A, B \fCenter\ C$
 %            \end{prooftree}
     \end{description}
+I got the rest as well.
+
+\subsection{Proposition 4.3}
+If there are no inferences, then clearly a sequent \(\Gamma \rightarrow \Delta\) is \(\LK_\mathcal{A}\)-provable
+only if \(\Gamma \rightarrow \Delta\) is provable from \(\mathcal{A}\) in \(\LK\).
+
+\subsection{Lemma 5.4}
+I'm trying to deal with the case of \(\supset\)-left when  \(r_r(P) = 1\) and \(r_l(P) > 1\). Mancosu pointed it out as needing special attention.
 \end{document}
