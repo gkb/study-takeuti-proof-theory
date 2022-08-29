@@ -12,6 +12,7 @@
 \newtheorem{lemma}{Lemma}
 
 \DeclareMathOperator{\LK}{\textbf{LK}}
+\def\fCenter{\mbox{\Large$\rightarrow$}}
 
 \title{Notes from Proof Theory by Takeuti}
 \author{gajukbhat}
@@ -76,4 +77,12 @@ only if \(\Gamma \rightarrow \Delta\) is provable from \(\mathcal{A}\) in \(\LK\
 
 \subsection{Lemma 5.4}
 I'm trying to deal with the case of \(\supset\)-left when  \(r_r(P) = 1\) and \(r_l(P) > 1\). Mancosu pointed it out as needing special attention.
+
+\subsection{Exercise 6.7}
+There's a cut-free proof for the sequent \(A \fCenter B\) that has a mid-sequent.
+Use induction on the number of inferences in the proof with the mid-sequent, Take the example of
+a \(\land\)-right inference above a mid-sequent. If \(C_1\) and \(C_2\) are the interpolants for the two
+upper sequents for the inference, \(C_1 \land C_2\) is the interpolant of the lower sequent.
+
+For the case with no inferences, \(A\) is the same as \(B\) and is atomic. \(C = A\) suffices.
 \end{document}
