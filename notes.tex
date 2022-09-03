@@ -85,4 +85,31 @@ a \(\land\)-right inference above a mid-sequent. If \(C_1\) and \(C_2\) are the 
 upper sequents for the inference, \(C_1 \land C_2\) is the interpolant of the lower sequent.
 
 For the case with no inferences, \(A\) is the same as \(B\) and is atomic. \(C = A\) suffices.
+
+\subsection{Review of Cut Elimination}
+\begin{enumerate}
+\item We have a double induction on \(\omega g + r\) where \(g\) is the grade and \(r\) is the rank.
+\item The case of \(r = 2\) is where I want to start.
+\end{enumerate}
+
+\subsection{Theorem 6.9}
+There are two cases I can distinguish when the condition that there's no semi-sub-term of \(t\) in \(S\)
+isn't satisfied.
+\begin{description}
+\item[Case 1:] a sub-semi-term occurs in the same formula
+\item[Case 2:] a sub-semi-term occurs in a different formula.
+\end{description}
+Then look at quantifier inferences.
+
+Let's say there are terms \(f(a, b)\) and \(g(f(c, b), d)\) in different formulas in the upper sequent and
+there are terms \(f(x_1, b)\) and \(g(f(c, b), d)\) in the lower sequent. \(x_1\) is a bound variable.
+
+It's clear that \(\forall\) : left and \(\exists\) : right are the two rules I need to worry about.
+
+No wait, I have to look at the other two rules as well. None of the inferences alter terms. That's
+important to note.
+
+Conclusion: I'm a bit confused. In the comments on the book, the steps to remove my confusion
+are made clear.
+% Now what happens when the condition is satisfied. I'm dealing with a regular proof.
 \end{document}
